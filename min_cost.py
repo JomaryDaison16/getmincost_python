@@ -15,24 +15,18 @@ def getMinimumCost(k, c):
 
 	if n >= 0 and k > 0: #Check if the input is valid k should be 1 or more and n should not have negative value
 		if (n >= 0 and n <= k):
-			# print("first")
 			for i in range(n):
 				Cost += 1 * c[i]
 			return Cost
 		
 		elif(n > k):
-			# print("Second")
 			for i in range(n):
-				# print("i",i)
-				# print("n",n)
 				Cost += (NumPurchase + 1) * c[i]
-				# print("cost",Cost)
 				if (i+1)%k==0:
 					NumPurchase += 1
 			return Cost
 		
 		else:
-			# print("Last")
 			print("Please enter valid Input")
 	else:
 			print("Please enter valid Input")
